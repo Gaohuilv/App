@@ -32,9 +32,10 @@ These instructions should get you set up ready to work on New Expensify 🙌
 
 ## Getting Started
 1. Install `nvm` then `node` & `npm`: `brew install nvm && nvm install`
-2. Install `watchman`: `brew install watchman`
-3. Install dependencies: `npm install`
-4. Run the specific platform with the following command: `npm run <platform>`, e.g. `npm run web`
+2. Install the pinned `npm` version: `./scripts/setup-npm.sh` (node bundles an older npm than the one pinned in `package.json` engines)
+3. Install `watchman`: `brew install watchman`
+4. Install dependencies: `npm install`
+5. Run the specific platform with the following command: `npm run <platform>`, e.g. `npm run web`
 
 You can use any IDE or code editing tool for developing on any platform. Use your favorite!
 
