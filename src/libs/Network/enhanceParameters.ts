@@ -1,9 +1,11 @@
-import Onyx from 'react-native-onyx';
-import {AUTHENTICATION_COMMAND} from '@libs/API/types';
 import * as Environment from '@libs/Environment/Environment';
 import getPlatform from '@libs/getPlatform';
+
 import CONFIG from '@src/CONFIG';
 import ONYXKEYS from '@src/ONYXKEYS';
+
+import Onyx from 'react-native-onyx';
+
 import pkg from '../../../package.json';
 import {getAuthToken, getCurrentUserEmail} from './NetworkStore';
 
@@ -48,7 +50,7 @@ Onyx.connectWithoutView({
  * Does this command require an authToken?
  */
 function isAuthTokenRequired(command: string): boolean {
-    return !['Log', AUTHENTICATION_COMMAND, 'BeginSignIn', 'SetPassword'].includes(command);
+    return !['Log', 'Authenticate', 'BeginSignIn', 'SetPassword'].includes(command);
 }
 
 /**
